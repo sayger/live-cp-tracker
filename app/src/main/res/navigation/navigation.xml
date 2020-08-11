@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/ongoingContestsFragment">
+
+    <fragment
+        android:id="@+id/ongoingContestsFragment"
+        android:name="com.aditya.livecptracker.OngoingContestsFragment"
+        android:label="OngoingContestsFragment"
+        tools:layout="@layout/fragment_ongoing_contests">
+        <action
+            android:id="@+id/action_ongoingContestsFragment_to_upcomingContestsFragment"
+            app:destination="@id/upcomingContestsFragment" />
+        <action
+            android:id="@+id/action_ongoingContestsFragment_to_contestDetailsFragment"
+            app:destination="@id/contestDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/upcomingContestsFragment"
+        android:name="com.aditya.livecptracker.UpcomingContestsFragment"
+        android:label="UpcomingContestsFragment"
+        tools:layout="@layout/fragment_upcoming_contests">
+        <action
+            android:id="@+id/action_upcomingContestsFragment_to_ongoingContestsFragment"
+            app:destination="@id/ongoingContestsFragment" />
+        <action
+            android:id="@+id/action_upcomingContestsFragment_to_contestDetailsFragment"
+            app:destination="@id/contestDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/contestDetailsFragment"
+        android:name="com.aditya.livecptracker.ContestDetailsFragment"
+        android:label="ContestDetailsFragment"
+        tools:layout="@layout/fragment_contest_details"/>
+</navigation>

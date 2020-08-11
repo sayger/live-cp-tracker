@@ -1,15 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".UpcomingContestsFragment">
+        android:layout_height="wrap_content"
+        tools:context=".OngoingContestsFragment"
+        android:orientation="vertical">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Upcoming Contests here" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_marginTop="-8dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="36dp"
+                android:src="@drawable/ic_background"
+                android:layout_marginStart="36dp"
+                android:contentDescription="@string/todo" />
+            <ImageView
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:src="@drawable/code_pc"
+                android:layout_marginLeft="48dp"
+                android:layout_marginTop="120dp"
+                android:layout_marginStart="44dp"
+                android:contentDescription="@string/todo" />
+        </RelativeLayout>
 
-    </RelativeLayout>
+        <RadioGroup
+            android:id="@+id/radioButton"
+            android:layout_width="230dp"
+            android:layout_height="52dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/radio_bg"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/ongoing_rb"
+                style="@style/RadioButton"
+                android:button="@null"
+                android:checked="false"
+                android:text="Ongoing"/>
+            <RadioButton
+                android:id="@+id/upcoming_rb"
+                style="@style/RadioButton"
+                android:button="@null"
+                android:background="@drawable/radio_tab_selector"
+                android:checked="true"
+                android:text="Upcoming"/>
+        </RadioGroup>
+    </LinearLayout>
 </layout>

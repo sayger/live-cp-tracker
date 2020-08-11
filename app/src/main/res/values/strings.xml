@@ -3,4 +3,5 @@
     <string name="live_cp_tracker">Live CP Tracker</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="todo">TODO</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.aditya.livecptracker
+package com.aditya.livecptracker.screens
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,13 +8,15 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import com.aditya.livecptracker.R
 import com.aditya.livecptracker.databinding.FragmentUpcomingContestsBinding
 
 class UpcomingContestsFragment : Fragment() {
     private lateinit var binding : FragmentUpcomingContestsBinding
     private lateinit var navController: NavController
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_upcoming_contests, container, false)
+        binding = DataBindingUtil.inflate(inflater,
+            R.layout.fragment_upcoming_contests, container, false)
         return binding.root
     }
 

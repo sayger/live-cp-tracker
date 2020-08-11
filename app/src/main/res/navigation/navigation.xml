@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/ongoingContestsFragment"
-        android:name="com.aditya.livecptracker.OngoingContestsFragment"
+        android:name="com.aditya.livecptracker.screens.OngoingContestsFragment"
         android:label="OngoingContestsFragment"
         tools:layout="@layout/fragment_ongoing_contests">
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/upcomingContestsFragment"
-        android:name="com.aditya.livecptracker.UpcomingContestsFragment"
+        android:name="com.aditya.livecptracker.screens.UpcomingContestsFragment"
         android:label="UpcomingContestsFragment"
         tools:layout="@layout/fragment_upcoming_contests">
         <action
@@ -31,7 +31,7 @@
     </fragment>
     <fragment
         android:id="@+id/contestDetailsFragment"
-        android:name="com.aditya.livecptracker.ContestDetailsFragment"
+        android:name="com.aditya.livecptracker.screens.ContestDetailsFragment"
         android:label="ContestDetailsFragment"
         tools:layout="@layout/fragment_contest_details"/>
 </navigation>

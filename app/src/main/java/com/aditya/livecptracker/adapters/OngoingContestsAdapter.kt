@@ -32,7 +32,22 @@ class OngoingContestsAdapter(): RecyclerView.Adapter<OngoingContestsAdapter.View
         holder.contestBrief.text = currentItem.platform.plus(" | ")
         val currentSystemDate = LocalDateTime.now().toString().substring(8, 10)
         val contestEndDate = currentItem.endTime.substring(8, 10)
-
+        if(contestEndDate > currentSystemDate) {
+            when(contestEndDate.toInt() - currentSystemDate.toInt()) {
+                1 -> holder.contestBrief.text.toString().plus("Ends in a day")
+                else -> holder.contestBrief.text.toString().plus("Ends in ${contestEndDate.toInt() - currentSystemDate.toInt()} days")
+            }
+        } else {
+            val dayDiff = when(LocalDateTime.now().toString().substring(5, 7).toInt()) {
+                1, 3, 5, 7, 8, 10, 12 -> 31.minus(currentSystemDate.toInt())
+                2 -> 28.minus(currentSystemDate.toInt())
+                else -> 30.minus(currentSystemDate.toInt())
+            }
+            when(dayDiff + contestEndDate.toInt()) {
+                1 -> holder.contestBrief.text.toString().plus("Ends in a day")
+                else -> holder.contestBrief.text.toString().plus("Ends in ${dayDiff + contestEndDate.toInt()} days")
+            }
+        }
     }
     override fun getItemCount(): Int = contestList.size
 

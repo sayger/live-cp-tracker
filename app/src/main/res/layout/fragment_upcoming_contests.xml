@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <LinearLayout
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
@@ -59,6 +65,34 @@
             android:clipToPadding="false"
             android:layout_marginTop="8dp"
             android:padding="8dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/item_view_upcoming"/>
     </LinearLayout>
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:layout_marginRight="72dp"
+            android:visibility="visible"
+            android:layout_alignParentBottom="true"
+            app:lottie_autoPlay="true"
+            android:layout_marginBottom="72dp"
+            android:layout_marginLeft="72dp"
+            app:lottie_colorFilter="#0089C4"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/anim_two" />
+
+        <TextView
+            android:id="@+id/fetch_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/animationView"
+            android:visibility="visible"
+            android:text="Fetching Contest Information..."
+            android:fontFamily="@font/google_sans_regular"
+            android:textColor="#000"
+            android:layout_centerHorizontal="true"
+            android:textSize="16sp"
+            android:layout_marginTop="-180dp"/>
+    </RelativeLayout>
 </layout>

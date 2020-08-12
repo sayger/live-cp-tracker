@@ -6,6 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.annotation.RequiresApi
+import androidx.cardview.widget.CardView
+import androidx.core.os.bundleOf
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.aditya.livecptracker.R
 import com.aditya.livecptracker.network.ContestDetails
@@ -46,6 +49,12 @@ class UpcomingContestsAdapter() : RecyclerView.Adapter<UpcomingContestsAdapter.V
         contestPlatform = contestPlatform.substring(0, 1).capitalize(Locale.ROOT)
             .plus(contestPlatform.subSequence(1, contestPlatform.length))
         holder.contestBrief.text = contestPlatform.plus(" | ${currentItem.duration}")
+        holder.contestCard.setOnClickListener {
+            it.findNavController().navigate(R.id.action_upcomingContestsFragment_to_contestDetailsFragment,
+                bundleOf("contestPlatform" to currentItem.platform,
+                    "contestName" to currentItem.name, "contestStartTime" to currentItem.startTime)
+            )
+        }
     }
 
     override fun getItemCount(): Int = contestList.size
@@ -55,5 +64,6 @@ class UpcomingContestsAdapter() : RecyclerView.Adapter<UpcomingContestsAdapter.V
         val contestName: TextView = unitView.contest_name
         val contestBrief: TextView = unitView.contest_brief
         val contestMonth: TextView = unitView.month
+        val contestCard: CardView = unitView.contest_card
     }
 }

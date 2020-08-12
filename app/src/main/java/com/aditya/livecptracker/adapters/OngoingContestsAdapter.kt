@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.cardview.widget.CardView
+import androidx.core.os.bundleOf
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.aditya.livecptracker.R
@@ -32,9 +33,6 @@ class OngoingContestsAdapter() : RecyclerView.Adapter<OngoingContestsAdapter.Vie
     @ExperimentalStdlibApi
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.contestCard.setOnClickListener{
-            it.findNavController().navigate(R.id.action_ongoingContestsFragment_to_contestDetailsFragment)
-        }
         val currentItem = contestList[position]
         if (currentItem.name.substring(0, 3) != "Are" &&
             currentItem.name.substring(0, 5) != "Check"
@@ -77,6 +75,11 @@ class OngoingContestsAdapter() : RecyclerView.Adapter<OngoingContestsAdapter.Vie
                         .plus("Ends in ${dayDiff + contestEndDate.toInt()} days")
                 }
             }
+        }
+        holder.contestCard.setOnClickListener {
+            it.findNavController().navigate(R.id.action_ongoingContestsFragment_to_contestDetailsFragment,
+            bundleOf("contestPlatform" to currentItem.platform,
+            "contestName" to currentItem.name, "contestEndTime" to currentItem.endTime))
         }
     }
 

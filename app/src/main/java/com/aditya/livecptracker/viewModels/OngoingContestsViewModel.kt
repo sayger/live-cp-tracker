@@ -4,10 +4,7 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.aditya.livecptracker.network.APIAccessClass
-import com.aditya.livecptracker.network.ContestDetails
-import com.aditya.livecptracker.network.ContestTrackerApi
-import com.aditya.livecptracker.network.ResultSubClass
+import com.aditya.livecptracker.network.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

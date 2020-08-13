@@ -68,22 +68,15 @@ class ContestDetailsFragment : Fragment() {
         val sdf = SimpleDateFormat("yyyy-mm-dd HH:mm:ss")
         val timeDiff: Long = sdf.parse(convertToSimpleDateFormat(timeSetter))!!.time -
                 sdf.parse(LocalDateTime.now().toString().replaceRange(10, 11, " "))!!.time
-        println("timediff = ${TimeUnit.MILLISECONDS.toDays(timeDiff)}")
-        val dayTimer = object : CountDownTimer(TimeUnit.MILLISECONDS.toMillis(timeDiff), 1000) {
-            override fun onFinish() {
-                println("Day timer complete")
-            }
-
-            override fun onTick(millisUntilFinished: Long) {
-                binding.hour.setText("${millisUntilFinished/1000}")
-            }
-        }
-        dayTimer.start()
+        println("timeDiff = ${TimeUnit.MILLISECONDS.toDays(timeDiff)%365}")
+//        println("Local time is : ${LocalDateTime.now().toString().replaceRange(10, 11, " ")}")
+//        println("Contest time is : ${convertToSimpleDateFormat(timeSetter)}")
     }
 
     private fun convertToSimpleDateFormat(s: String): String {
         var d = ""
-        d += s.substring(5, 7) + "-"
+
+        d += s.substring(12, 16) + "-"
         d +=
             when (s.substring(8, 11)) {
                 "Jan" -> "01-"
@@ -99,8 +92,7 @@ class ContestDetailsFragment : Fragment() {
                 "Nov" -> "11-"
                 else -> "12-"
             }
-
-        d += s.substring(12, 16) + " "
+        d += s.substring(5, 7) + " "
         d += s.substring(17, 22) + ":00"
         return d
     }

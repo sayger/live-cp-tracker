@@ -60,7 +60,7 @@ class OngoingContestsFragment : Fragment() {
                         true
                     }
                     R.id.oss_lic -> {
-                        //startActivity(Intent(requireContext(), OssLicensesMenuActivity::class.java))
+                        startActivity(Intent(requireContext(), OssLicensesMenuActivity::class.java))
                         true
                     }
                     R.id.about_app -> {

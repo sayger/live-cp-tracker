@@ -33,5 +33,18 @@
         android:id="@+id/contestDetailsFragment"
         android:name="com.aditya.livecptracker.screens.ContestDetailsFragment"
         android:label="ContestDetailsFragment"
-        tools:layout="@layout/fragment_contest_details"/>
+        tools:layout="@layout/fragment_contest_details">
+        <action
+            android:id="@+id/action_contestDetailsFragment_to_contestPageFragment"
+            app:destination="@id/contestPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/contestPageFragment"
+        android:name="com.aditya.livecptracker.screens.ContestPageFragment"
+        android:label="ContestPageFragment"
+        tools:layout="@layout/fragment_contest_page">
+        <action
+            android:id="@+id/action_contestPageFragment_to_contestDetailsFragment"
+            app:destination="@id/contestDetailsFragment" />
+    </fragment>
 </navigation>

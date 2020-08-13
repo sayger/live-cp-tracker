@@ -19,6 +19,7 @@
                 android:src="@drawable/details_bg" />
 
             <ImageView
+                android:id="@+id/contest_platform"
                 android:layout_width="220dp"
                 android:layout_height="72dp"
                 android:layout_gravity="center_horizontal"
@@ -26,9 +27,10 @@
                 android:src="@drawable/ic_cc" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/contest_name"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
                 android:fontFamily="@font/google_sans_medium"
                 android:padding="4dp"
                 android:text="August Challenge 2020"
@@ -43,6 +45,7 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/time_setter_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="-12dp"
@@ -57,6 +60,7 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        android:id="@+id/day"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/google_sans_bold"
@@ -76,6 +80,7 @@
                         android:textSize="16sp" />
 
                     <TextView
+                        android:id="@+id/hour"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/google_sans_bold"
@@ -95,6 +100,7 @@
                         android:textSize="16sp" />
 
                     <TextView
+                        android:id="@+id/min"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/google_sans_bold"
@@ -114,6 +120,7 @@
                         android:textSize="16sp" />
 
                     <TextView
+                        android:id="@+id/sec"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/google_sans_bold"
@@ -167,6 +174,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/visit_contest_page"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"

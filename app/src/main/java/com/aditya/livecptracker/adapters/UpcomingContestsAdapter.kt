@@ -52,7 +52,7 @@ class UpcomingContestsAdapter() : RecyclerView.Adapter<UpcomingContestsAdapter.V
         holder.contestCard.setOnClickListener {
             it.findNavController().navigate(R.id.action_upcomingContestsFragment_to_contestDetailsFragment,
                 bundleOf("contestPlatform" to currentItem.platform,
-                    "contestName" to currentItem.name, "contestStartTime" to currentItem.startTime,
+                    "contestName" to holder.contestName.text.toString(), "contestStartTime" to currentItem.startTime.toString(),
                 "contestUrl" to currentItem.url, "fragmentFlag" to "1")
             )
         }

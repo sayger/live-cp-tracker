@@ -79,7 +79,7 @@ class OngoingContestsAdapter() : RecyclerView.Adapter<OngoingContestsAdapter.Vie
         holder.contestCard.setOnClickListener {
             it.findNavController().navigate(R.id.action_ongoingContestsFragment_to_contestDetailsFragment,
             bundleOf("contestPlatform" to currentItem.platform,
-            "contestName" to currentItem.name, "contestEndTime" to currentItem.endTime,
+            "contestName" to holder.contestName.text.toString(), "contestEndTime" to currentItem.endTime,
                 "contestUrl" to currentItem.url, "fragmentFlag" to "0"))
         }
     }

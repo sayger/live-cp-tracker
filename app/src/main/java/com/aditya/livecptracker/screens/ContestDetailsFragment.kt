@@ -69,8 +69,6 @@ class ContestDetailsFragment : Fragment() {
         val timeDiff: Long = sdf.parse(convertToSimpleDateFormat(timeSetter))!!.time -
                 sdf.parse(LocalDateTime.now().toString().replaceRange(10, 11, " "))!!.time
         println("timeDiff = ${TimeUnit.MILLISECONDS.toDays(timeDiff)%365}")
-//        println("Local time is : ${LocalDateTime.now().toString().replaceRange(10, 11, " ")}")
-//        println("Contest time is : ${convertToSimpleDateFormat(timeSetter)}")
     }
 
     private fun convertToSimpleDateFormat(s: String): String {

@@ -1,10 +1,13 @@
 package com.aditya.livecptracker.screens
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.MenuInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.PopupMenu
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -15,6 +18,7 @@ import com.aditya.livecptracker.R
 import com.aditya.livecptracker.adapters.OngoingContestsAdapter
 import com.aditya.livecptracker.databinding.FragmentOngoingContestsBinding
 import com.aditya.livecptracker.viewModels.OngoingContestsViewModel
+import com.google.android.gms.oss.licenses.OssLicensesMenuActivity
 import kotlinx.android.synthetic.main.fragment_ongoing_contests.*
 
 class OngoingContestsFragment : Fragment() {
@@ -45,5 +49,28 @@ class OngoingContestsFragment : Fragment() {
             binding.animationView.visibility = View.GONE
             binding.fetchText.visibility = View.GONE
         })
+        binding.dropDown.setOnClickListener {
+            val popup = PopupMenu(requireContext(), it)
+            val inflater: MenuInflater = popup.menuInflater
+            inflater.inflate(R.menu.dropdown_menu, popup.menu)
+            popup.show()
+            popup.setOnMenuItemClickListener {
+                when(it.itemId) {
+                    R.id.app_theme -> {
+                        true
+                    }
+                    R.id.oss_lic -> {
+                        //startActivity(Intent(requireContext(), OssLicensesMenuActivity::class.java))
+                        true
+                    }
+                    R.id.about_app -> {
+                        true
+                    }
+                    else -> {
+                        true
+                    }
+                }
+            }
+        }
     }
 }

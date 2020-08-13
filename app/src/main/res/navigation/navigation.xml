@@ -37,6 +37,15 @@
         <action
             android:id="@+id/action_contestDetailsFragment_to_contestPageFragment"
             app:destination="@id/contestPageFragment" />
+        <action
+            android:id="@+id/action_contestDetailsFragment_to_ongoingContestsFragment"
+            app:destination="@id/ongoingContestsFragment" />
+        <action
+            android:id="@+id/action_contestDetailsFragment_to_upcomingContestsFragment"
+            app:destination="@id/upcomingContestsFragment" />
+        <action
+            android:id="@+id/action_contestDetailsFragment_to_upcomingContestsFragment2"
+            app:destination="@id/upcomingContestsFragment" />
     </fragment>
     <fragment
         android:id="@+id/contestPageFragment"

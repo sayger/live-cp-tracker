@@ -59,6 +59,12 @@ class ContestDetailsFragment : Fragment() {
                 bundleOf("contestUrl" to arguments?.getString("contestUrl"))
             )
         }
+        binding.backBtn.setOnClickListener {
+            when(arguments?.getString("fragmentFlag")) {
+                "0" -> it.findNavController().navigate(R.id.action_contestDetailsFragment_to_ongoingContestsFragment)
+                "1" -> it.findNavController().navigate(R.id.action_contestDetailsFragment_to_upcomingContestsFragment)
+            }
+        }
         val sdf = SimpleDateFormat("yyyy-mm-dd HH:mm:ss")
         val timeDiff: Long = sdf.parse(convertToSimpleDateFormat(timeSetter))!!.time -
                 sdf.parse(LocalDateTime.now().toString().replaceRange(10, 11, " "))!!.time

@@ -9,7 +9,7 @@ import com.aditya.livecptracker.MainActivity
 import com.aditya.livecptracker.R
 import com.aditya.livecptracker.databinding.ActivitySplashScreenBinding
 
-class SplashScreen : AppCompatActivity() {
+class SplashScreenActivity : AppCompatActivity() {
     private lateinit var binding : ActivitySplashScreenBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

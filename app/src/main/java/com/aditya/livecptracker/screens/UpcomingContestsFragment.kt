@@ -64,6 +64,7 @@ class UpcomingContestsFragment : Fragment() {
                         true
                     }
                     R.id.about_app -> {
+                        startActivity(Intent(requireContext(), AboutAppActivity::class.java))
                         true
                     }
                     else -> {

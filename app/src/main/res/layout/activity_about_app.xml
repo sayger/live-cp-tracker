@@ -33,7 +33,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginLeft="24dp"
                     android:fontFamily="@font/google_sans_bold"
-                    android:text="About App"
+                    android:text="@string/about_app"
                     android:textColor="#008DB9"
                     android:textSize="28sp" />
             </LinearLayout>
@@ -47,15 +47,15 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Live CP Tracker"
-                android:textSize="28dp"
+                android:text="@string/live_cp_tracker"
+                android:textSize="28sp"
                 android:fontFamily="@font/google_sans_medium"
                 android:textColor="@color/colorPrimary"
                 android:layout_gravity="center_horizontal"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Live Competitive Programming tracker is a simpler and mobile version of Clist.by that helps you remain updated with latest ongoing and upcoming programming contests."
+                android:text="@string/live_competitive_programming_tracker_is_a_simpler_and_mobile_version_of_clist_by_that_helps_you_remain_updated_with_latest_ongoing_and_upcoming_programming_contests"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
                 android:layout_marginTop="4dp"

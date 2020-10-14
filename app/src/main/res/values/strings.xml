@@ -5,4 +5,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="todo">TODO</string>
     <string name="drop_down">drop_down</string>
+    <string name="live_competitive_programming_tracker_is_a_simpler_and_mobile_version_of_clist_by_that_helps_you_remain_updated_with_latest_ongoing_and_upcoming_programming_contests">Live Competitive Programming tracker is a simpler and mobile version of Clist.by that helps you remain updated with latest ongoing and upcoming programming contests.</string>
+    <string name="about_app">About App</string>
+    <string name="august_challenge_2020">August Challenge 2020</string>
 </resources>

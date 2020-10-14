@@ -56,9 +56,6 @@ class OngoingContestsFragment : Fragment() {
             popup.show()
             popup.setOnMenuItemClickListener {
                 when(it.itemId) {
-                    R.id.app_theme -> {
-                        true
-                    }
                     R.id.oss_lic -> {
                         startActivity(Intent(requireContext(), OssLicensesMenuActivity::class.java))
                         true

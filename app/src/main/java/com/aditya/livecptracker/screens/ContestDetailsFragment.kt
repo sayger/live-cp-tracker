@@ -12,6 +12,7 @@ import androidx.annotation.RequiresApi
 import androidx.core.os.bundleOf
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
+import com.aditya.livecptracker.LiveCPTracker
 import com.aditya.livecptracker.R
 import com.aditya.livecptracker.databinding.FragmentContestDetailsBinding
 import java.text.SimpleDateFormat
@@ -38,6 +39,7 @@ class ContestDetailsFragment : Fragment() {
             "0" -> arguments?.getString("contestEndTime").toString()
             else -> arguments?.getString("contestStartTime").toString()
         }
+        LiveCPTracker.logs("")
 
         binding.timeSetterText.text = when (arguments?.getString("fragmentFlag")) {
             "0" -> "Ends In"

@@ -14,15 +14,28 @@
 
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_marginTop="-8dp"
             android:layout_height="wrap_content">
-            <ImageView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="36dp"
-                android:src="@drawable/ic_background"
-                android:layout_marginStart="36dp"
-                android:contentDescription="@string/todo" />
+                android:orientation="horizontal"
+                android:paddingLeft="32dp"
+                android:paddingTop="24dp"
+                android:paddingBottom="24dp">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/icon_cal"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contest Tracker"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="#3B3B3B"
+                    android:fontFamily="@font/google_sans_bold"
+                    android:textSize="32sp"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
             <ImageView
                 android:id="@+id/drop_down"
                 android:layout_width="wrap_content"
@@ -30,19 +43,11 @@
                 android:layout_alignParentRight="true"
                 android:padding="16dp"
                 android:layout_marginTop="12dp"
-                android:layout_marginRight="8dp"
+                android:layout_marginRight="16dp"
                 android:src="@drawable/ic_drop_down"
                 android:contentDescription="@string/drop_down"
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="8dp" />
-            <ImageView
-                android:layout_width="56dp"
-                android:layout_height="56dp"
-                android:src="@drawable/code_pc"
-                android:layout_marginLeft="48dp"
-                android:layout_marginTop="120dp"
-                android:layout_marginStart="44dp"
-                android:contentDescription="@string/todo" />
         </RelativeLayout>
 
         <RadioGroup
@@ -51,7 +56,6 @@
             android:layout_height="52dp"
             android:layout_marginLeft="24dp"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="12dp"
             android:background="@drawable/radio_bg"
             android:orientation="horizontal">
             <RadioButton
